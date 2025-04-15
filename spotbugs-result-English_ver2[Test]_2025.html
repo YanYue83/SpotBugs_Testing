@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+		</style>
+   </head>
+   <body>
+      <h1>SpotBugs Report</h1>
+      <p>Produced using <a href="https://spotbugs.github.io">SpotBugs</a>4.9.0.</p>
+      <p>Project: 
+			English_ver2[Test]</p>
+      <h2>Metrics</h2>
+      <p>1419 lines of code analyzed,
+	in 33 classes, 
+	in 7 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">9</td>
+            <td align="right">6.34</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">34</td>
+            <td align="right">23.96</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>43</b>
+            </td>
+            <td align="right">
+               <b>30.30</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Summary</h2>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">7</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_I18N">Internationalization Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">12</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </td>
+            <td align="right">6</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">13</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>43</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>Warnings</h1>
+      <p>Click on each warning link to see a full description of the issue, and
+	    details of how to resolve it.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DMI_RANDOM_USED_ONLY_ONCE">Random object created and used only once</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Random object created and used only once in Game.Game.getRandom()<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 26 26<br/>In class Game.Game<br/>In method Game.Game.getRandom()<br/>Called method java.util.Random.nextInt(int)<br/>At Game.java:[line 26]<br/>At Game.java:[line 26]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#ES_COMPARING_STRINGS_WITH_EQ">Comparison of String objects using == or !=</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Comparison of String objects using == or != in View.Controller.ScrambleController.lambda$6(Button, Node)<br/>
+                  <br/>
+                  <br/>In file ScrambleController.java ScrambleController.java,
+					
+						line 211 211<br/>In class View.Controller.ScrambleController<br/>In method View.Controller.ScrambleController.lambda$6(Button, Node)<br/>Actual type String<br/>Return value of javafx.scene.control.Button.getUserData() of type Object<br/>Return value of javafx.scene.control.Button.getId() of type String<br/>At ScrambleController.java:[line 211]<br/>At ScrambleController.java:[line 211]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#OS_OPEN_STREAM">Method may fail to close stream</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>DictionaryCommanLine.DictionaryManagement.addWord(Word, String) may fail to close stream<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 132 132<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.addWord(Word, String)<br/>Need to close java.io.Writer <br/>At DictionaryManagement.java:[line 132]<br/>At DictionaryManagement.java:[line 132]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES">Do not reuse public identifiers from JSL as class name</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>The name of the class DictionaryCommanLine.Dictionary shadows the publicly available identifier from the Java Standard Library.<br/>
+                  <br/>
+                  <br/>In file Dictionary.java,
+					
+						line 5<br/>In class DictionaryCommanLine.Dictionary<br/>At Dictionary.java:[line 5]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES">Do not reuse public identifiers from JSL as class name</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>The name of the class PrefixTree.Trie shadows the publicly available identifier from the Java Standard Library.<br/>
+                  <br/>
+                  <br/>In file Trie.java,
+					
+						lines 8
+						    to 53<br/>In class PrefixTree.Trie<br/>At Trie.java:[lines 8-53]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES">Do not reuse public identifiers from JSL as class name</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>The name of the class View.Test shadows the publicly available identifier from the Java Standard Library.<br/>
+                  <br/>
+                  <br/>In file Test.java,
+					
+						lines 11
+						    to 25<br/>In class View.Test<br/>At Test.java:[lines 11-25]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SE_COMPARATOR_SHOULD_BE_SERIALIZABLE">Comparator doesn't implement Serializable</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>DictionaryCommanLine.SortbyWord implements Comparator but not Serializable<br/>
+                  <br/>
+                  <br/>In file SortbyWord.java,
+					
+						lines 1
+						    to 8<br/>In class DictionaryCommanLine.SortbyWord<br/>At SortbyWord.java:[lines 1-8]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_I18N">Internationalization Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in DictionaryCommanLine.DictionaryManagement.addWord(Word, String): new java.io.FileWriter(String, boolean)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 131 131<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.addWord(Word, String)<br/>Called method new java.io.FileWriter(String, boolean)<br/>At DictionaryManagement.java:[line 131]<br/>At DictionaryManagement.java:[line 131]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in DictionaryCommanLine.DictionaryManagement.exportToFile(Dictionary, String): new java.io.FileWriter(String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 64 64<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.exportToFile(Dictionary, String)<br/>Called method new java.io.FileWriter(String)<br/>At DictionaryManagement.java:[line 64]<br/>At DictionaryManagement.java:[line 64]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in DictionaryCommanLine.DictionaryManagement.insertFromCommandline(Dictionary): new java.util.Scanner(InputStream)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 18 18<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.insertFromCommandline(Dictionary)<br/>Called method new java.util.Scanner(InputStream)<br/>At DictionaryManagement.java:[line 18]<br/>At DictionaryManagement.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String): new java.io.FileReader(String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 32 32<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String)<br/>Called method new java.io.FileReader(String)<br/>At DictionaryManagement.java:[line 32]<br/>At DictionaryManagement.java:[line 32]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Found reliance on default encoding in Service.WeatherDataService.getWeatherData(String): new java.io.InputStreamReader(InputStream)<br/>
+                  <br/>
+                  <br/>In file WeatherDataService.java WeatherDataService.java,
+					
+						line 23 23<br/>In class Service.WeatherDataService<br/>In method Service.WeatherDataService.getWeatherData(String)<br/>Called method new java.io.InputStreamReader(InputStream)<br/>At WeatherDataService.java:[line 23]<br/>At WeatherDataService.java:[line 23]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Game.Game.getCode() may expose internal representation by returning Game.code<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 33 33<br/>In class Game.Game<br/>In method Game.Game.getCode()<br/>Field Game.Game.code<br/>At Game.java:[line 33]<br/>At Game.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Game.Game.getRandom() may expose internal representation by returning Game.code<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 27 27<br/>In class Game.Game<br/>In method Game.Game.getRandom()<br/>Field Game.Game.code<br/>At Game.java:[line 27]<br/>At Game.java:[line 27]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Game.Game.getWordList() may expose internal representation by returning Game.wordList<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 41 41<br/>In class Game.Game<br/>In method Game.Game.getWordList()<br/>Field Game.Game.wordList<br/>At Game.java:[line 41]<br/>At Game.java:[line 41]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Game.Scramble.getAnswers() may expose internal representation by returning Scramble.answers<br/>
+                  <br/>
+                  <br/>In file Scramble.java Scramble.java,
+					
+						line 40 40<br/>In class Game.Scramble<br/>In method Game.Scramble.getAnswers()<br/>Field Game.Scramble.answers<br/>At Scramble.java:[line 40]<br/>At Scramble.java:[line 40]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.getMain() may expose internal representation by returning WeatherData.main<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 35 35<br/>In class Service.WeatherData<br/>In method Service.WeatherData.getMain()<br/>Field Service.WeatherData.main<br/>At WeatherData.java:[line 35]<br/>At WeatherData.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.getWeather() may expose internal representation by returning WeatherData.weather<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 43 43<br/>In class Service.WeatherData<br/>In method Service.WeatherData.getWeather()<br/>Field Service.WeatherData.weather<br/>At WeatherData.java:[line 43]<br/>At WeatherData.java:[line 43]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.getWind() may expose internal representation by returning WeatherData.wind<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 11 11<br/>In class Service.WeatherData<br/>In method Service.WeatherData.getWind()<br/>Field Service.WeatherData.wind<br/>At WeatherData.java:[line 11]<br/>At WeatherData.java:[line 11]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new Game.Game(Dictionary) may expose internal representation by storing an externally mutable object into Game.wordList<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 18 18<br/>In class Game.Game<br/>In method new Game.Game(Dictionary)<br/>Field Game.Game.wordList<br/>Local variable named wordList<br/>At Game.java:[line 18]<br/>At Game.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Game.Game.setCode(Word) may expose internal representation by storing an externally mutable object into Game.code<br/>
+                  <br/>
+                  <br/>In file Game.java Game.java,
+					
+						line 37 37<br/>In class Game.Game<br/>In method Game.Game.setCode(Word)<br/>Field Game.Game.code<br/>Local variable named word<br/>At Game.java:[line 37]<br/>At Game.java:[line 37]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.setMain(WeatherData$MainData) may expose internal representation by storing an externally mutable object into WeatherData.main<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 39 39<br/>In class Service.WeatherData<br/>In method Service.WeatherData.setMain(WeatherData$MainData)<br/>Field Service.WeatherData.main<br/>Local variable named main<br/>At WeatherData.java:[line 39]<br/>At WeatherData.java:[line 39]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.setWeather(WeatherData$Weather[]) may expose internal representation by storing an externally mutable object into WeatherData.weather<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 47 47<br/>In class Service.WeatherData<br/>In method Service.WeatherData.setWeather(WeatherData$Weather[])<br/>Field Service.WeatherData.weather<br/>Local variable named weather<br/>At WeatherData.java:[line 47]<br/>At WeatherData.java:[line 47]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Service.WeatherData.setWind(WeatherData$WindData) may expose internal representation by storing an externally mutable object into WeatherData.wind<br/>
+                  <br/>
+                  <br/>In file WeatherData.java WeatherData.java,
+					
+						line 15 15<br/>In class Service.WeatherData<br/>In method Service.WeatherData.setWind(WeatherData$WindData)<br/>Field Service.WeatherData.wind<br/>Local variable named wind<br/>At WeatherData.java:[line 15]<br/>At WeatherData.java:[line 15]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SBSC_USE_STRINGBUFFER_CONCATENATION">Method concatenates strings using + in a loop</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String) concatenates strings using + in a loop<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 42<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String)<br/>At DictionaryManagement.java:[line 42]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Unread field: Game.Game.path; should this field be static?<br/>
+                  <br/>
+                  <br/>In file Game.java,
+					
+						line 11<br/>In class Game.Game<br/>Field Game.Game.path<br/>At Game.java:[line 11]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Unread field: View.Controller.AddWordController.path; should this field be static?<br/>
+                  <br/>
+                  <br/>In file AddWordController.java,
+					
+						line 20<br/>In class View.Controller.AddWordController<br/>Field View.Controller.AddWordController.path<br/>At AddWordController.java:[line 20]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Unread field: View.Controller.BookmarkController.path; should this field be static?<br/>
+                  <br/>
+                  <br/>In file BookmarkController.java,
+					
+						line 28<br/>In class View.Controller.BookmarkController<br/>Field View.Controller.BookmarkController.path<br/>At BookmarkController.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Unread field: View.Controller.DictionaryController.path; should this field be static?<br/>
+                  <br/>
+                  <br/>In file DictionaryController.java,
+					
+						line 28<br/>In class View.Controller.DictionaryController<br/>Field View.Controller.DictionaryController.path<br/>At DictionaryController.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Unread field: View.Controller.ScrambleController.questionDuration; should this field be static?<br/>
+                  <br/>
+                  <br/>In file ScrambleController.java,
+					
+						line 29<br/>In class View.Controller.ScrambleController<br/>Field View.Controller.ScrambleController.questionDuration<br/>At ScrambleController.java:[line 29]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DLS_DEAD_LOCAL_STORE">Dead store to local variable</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Dead store to scene in View.Controller.BookmarkController.handleClickReturnBtn(ActionEvent)<br/>
+                  <br/>
+                  <br/>In file BookmarkController.java BookmarkController.java,
+					
+						line 95 95<br/>In class View.Controller.BookmarkController<br/>In method View.Controller.BookmarkController.handleClickReturnBtn(ActionEvent)<br/>Local variable named scene<br/>At BookmarkController.java:[line 95]<br/>At BookmarkController.java:[line 95]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DLS_DEAD_LOCAL_STORE">Dead store to local variable</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Dead store to scene in View.Controller.DictionaryController.handleClickStar()<br/>
+                  <br/>
+                  <br/>In file DictionaryController.java DictionaryController.java,
+					
+						line 195 195<br/>In class View.Controller.DictionaryController<br/>In method View.Controller.DictionaryController.handleClickStar()<br/>Local variable named scene<br/>At DictionaryController.java:[line 195]<br/>At DictionaryController.java:[line 195]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DLS_DEAD_LOCAL_STORE">Dead store to local variable</a>
+            </td>
+            <td width="10%" valign="top">High</td>
+            <td width="70%">
+               <p>Dead store to scene in View.Controller.ScrambleStartController.handleClickStart()<br/>
+                  <br/>
+                  <br/>In file ScrambleStartController.java ScrambleStartController.java,
+					
+						line 33 33<br/>In class View.Controller.ScrambleStartController<br/>In method View.Controller.ScrambleStartController.handleClickStart()<br/>Local variable named scene<br/>At ScrambleStartController.java:[line 33]<br/>At ScrambleStartController.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Do not catch NullPointerException like in DictionaryCommanLine.DictionaryManagement.addWord(Word, String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 137<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.addWord(Word, String)<br/>At DictionaryManagement.java:[line 137]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Do not catch NullPointerException like in DictionaryCommanLine.DictionaryManagement.deleteWord(Dictionary, int, String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 161<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.deleteWord(Dictionary, int, String)<br/>At DictionaryManagement.java:[line 161]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Do not catch NullPointerException like in DictionaryCommanLine.DictionaryManagement.dictionaryLookUp(Dictionary, String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 103<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.dictionaryLookUp(Dictionary, String)<br/>At DictionaryManagement.java:[line 103]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Do not catch NullPointerException like in DictionaryCommanLine.DictionaryManagement.setTrie(Dictionary)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 184<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.setTrie(Dictionary)<br/>At DictionaryManagement.java:[line 184]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Do not catch NullPointerException like in DictionaryCommanLine.DictionaryManagement.updateWord(Dictionary, int, String, String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java,
+					
+						line 149<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.updateWord(Dictionary, int, String, String)<br/>At DictionaryManagement.java:[line 149]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#DLS_DEAD_LOCAL_STORE">Dead store to local variable</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Dead store to length in View.Controller.ScrambleController.reset()<br/>
+                  <br/>
+                  <br/>In file ScrambleController.java ScrambleController.java,
+					
+						line 172 172<br/>In class View.Controller.ScrambleController<br/>In method View.Controller.ScrambleController.reset()<br/>Local variable named length<br/>At ScrambleController.java:[line 172]<br/>At ScrambleController.java:[line 172]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#INT_VACUOUS_BIT_OPERATION">Vacuous bit mask operation on integer value</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Vacuous iand operation on d in Service.GoogleTranslate.RL(int, String)<br/>
+                  <br/>
+                  <br/>In file GoogleTranslate.java GoogleTranslate.java,
+					
+						line 108 108<br/>In class Service.GoogleTranslate<br/>In method Service.GoogleTranslate.RL(int, String)<br/>Value iand<br/>Local variable named d<br/>At GoogleTranslate.java:[line 108]<br/>At GoogleTranslate.java:[line 108]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#NP_DEREFERENCE_OF_READLINE_VALUE">Dereference of the result of readLine() without nullcheck</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Dereference of the result of readLine() without nullcheck in DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String)<br/>
+                  <br/>
+                  <br/>In file DictionaryManagement.java DictionaryManagement.java,
+					
+						line 35 35<br/>In class DictionaryCommanLine.DictionaryManagement<br/>In method DictionaryCommanLine.DictionaryManagement.insertFromFile(Dictionary, String)<br/>Value loaded from englishWord<br/>At DictionaryManagement.java:[line 35]<br/>At DictionaryManagement.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Redundant nullcheck of value known to be non-null</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Redundant nullcheck of rawData, which is known to be non-null in Service.GoogleTranslate.translate(String, String, String)<br/>
+                  <br/>
+                  <br/>In file GoogleTranslate.java GoogleTranslate.java,
+					
+						line 50 50<br/>In class Service.GoogleTranslate<br/>In method Service.GoogleTranslate.translate(String, String, String)<br/>Value loaded from rawData<br/>Return value of Service.GoogleTranslate.urlToText(URL) of type String<br/>Redundant null check at GoogleTranslate.java:[line 50]<br/>Redundant null check at GoogleTranslate.java:[line 50]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Redundant nullcheck of value known to be non-null</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Redundant nullcheck of translatedText, which is known to be non-null in View.Controller.TranslateController.translateText()<br/>
+                  <br/>
+                  <br/>In file TranslateController.java TranslateController.java,
+					
+						line 49 49<br/>In class View.Controller.TranslateController<br/>In method View.Controller.TranslateController.translateText()<br/>Value loaded from translatedText<br/>Return value of Service.GoogleTranslate.translateMultipleSentences(String, String, String) of type String<br/>Redundant null check at TranslateController.java:[line 49]<br/>Redundant null check at TranslateController.java:[line 49]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>
+         <a name="Details">Warning Types</a>
+      </h1>
+      <h2>
+         <a name="DCN_NULLPOINTER_EXCEPTION">NullPointerException caught</a>
+      </h2>
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="DLS_DEAD_LOCAL_STORE">Dead store to local variable</a>
+      </h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="DMI_RANDOM_USED_ONLY_ONCE">Random object created and used only once</a>
+      </h2>
+
+<p> This code creates a java.util.Random object, uses it to generate one random number, and then discards
+the Random object. This produces mediocre quality random numbers and is inefficient.
+If possible, rewrite the code so that the Random object is created once and saved, and each time a new random number
+is required invoke a method on the existing Random object to obtain it.
+</p>
+
+<p>If it is important that the generated Random numbers not be guessable, you <em>must</em> not create a new Random for each random
+number; the values are too easily guessable. You should strongly consider using a java.security.SecureRandom instead
+(and avoid allocating a new SecureRandom for each random number needed).
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="DM_DEFAULT_ENCODING">Reliance on default encoding</a>
+      </h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="ES_COMPARING_STRINGS_WITH_EQ">Comparison of String objects using == or !=</a>
+      </h2>
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="INT_VACUOUS_BIT_OPERATION">Vacuous bit mask operation on integer value</a>
+      </h2>
+
+<p> This is an integer bit operation (and, or, or exclusive or) that doesn't do any useful work
+(e.g., <code>v & 0xffffffff</code>).
+
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="NP_DEREFERENCE_OF_READLINE_VALUE">Dereference of the result of readLine() without nullcheck</a>
+      </h2>
+
+  <p> The result of invoking readLine() is dereferenced without checking to see if the result is null. If there are no more lines of text
+to read, readLine() will return null and dereferencing that will generate a null pointer exception.
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="OS_OPEN_STREAM">Method may fail to close stream</a>
+      </h2>
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES">Do not reuse public identifiers from JSL as class name</a>
+      </h2>
+            <p>
+      It's a good practice to avoid reusing public identifiers from the Java Standard Library as class names.
+      This is because the Java Standard Library is a part of the Java platform and is expected to be available in all Java environments.
+      Doing so can lead to naming conflicts and confusion, making it harder to understand and maintain the code.
+      It's best practice to choose unique and descriptive class names that accurately represent the purpose and functionality of your own code.
+      To provide an example, let's say you want to create a class for handling dates in your application. Instead of using a common name like "Date",
+      which conflicts with the existing java.util.Date class, you could choose a more specific and unique name like or "AppDate" or "DisplayDate".
+
+      A few key points to keep in mind when choosing names as identifier:
+      <ul>
+        <li>Use meaningful prefixes or namespaces: Prepend a project-specific prefix or namespace to your class names to make them distinct. For example, if your project is named "MyApp", you could use "MyAppDate" as your class name.</li>
+        <li>Use descriptive names: Opt for descriptive class names that clearly indicate their purpose and functionality. This helps avoid shadowing existing Java Standard Library identifiers. For instance, instead of "List", consider using "CustomAppList".</li>
+        <li>Follow naming conventions: Adhere to Java's naming conventions, such as using camel case (e.g., MyClass) for class names. This promotes code readability and reduces the chances of conflicts.</li>
+      </ul>
+
+      </p>
+      <p>See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/DCL01-J.+Do+not+reuse+public+identifiers+from+the+Java+Standard+Library">DCL01-J. Do not reuse public identifiers from the Java Standard Library</a>.</p>
+      
+        <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Redundant nullcheck of value known to be non-null</a>
+      </h2>
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SBSC_USE_STRINGBUFFER_CONCATENATION">Method concatenates strings using + in a loop</a>
+      </h2>
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 5) explicitly.</p>
+
+<p> For example:</p>
+<pre><code>// This is bad
+String s = "";
+for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+}
+
+// This is better
+StringBuffer buf = new StringBuffer();
+for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+}
+String s = buf.toString();
+</code></pre>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SS_SHOULD_BE_STATIC">Unread field: should this field be static?</a>
+      </h2>
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE">Comparator doesn't implement Serializable</a>
+      </h2>
+
+  <p> This class implements the <code>Comparator</code> interface. You
+should consider whether or not it should also implement the <code>Serializable</code>
+interface. If a comparator is used to construct an ordered collection
+such as a <code>TreeMap</code>, then the <code>TreeMap</code>
+will be serializable only if the comparator is also serializable.
+As most comparators have little or no state, making them serializable
+is generally easy and good defensive programming.
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+   </body>
+</html>
