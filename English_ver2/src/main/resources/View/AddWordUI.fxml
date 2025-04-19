@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="789.0" prefWidth="846.0" style="-fx-background-color: #F6FAFD;" styleClass="border_round"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="View.Controller.AddWordController">
+
+    <children>
+        <AnchorPane layoutY="97.0" prefHeight="691.0" prefWidth="848.0" style="-fx-background-color: #F6FAFD;"
+                    styleClass="border_round" stylesheets="@style.css">
+            <children>
+                <TextField fx:id="wordTargetInput" layoutX="25.0" layoutY="107.0" prefHeight="32.0" prefWidth="386.0"
+                           promptText="Nhập từ tiếng anh..." styleClass="wordbox" stylesheets="@style.css">
+                    <font>
+                        <Font name="#9Slide03 Helve Regular" size="18.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow height="13.21" radius="3.185" width="1.53">
+                            <color>
+                                <Color red="0.35087719559669495" green="0.10612951964139938"
+                                       blue="0.35087719559669495"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </TextField>
+                <TextArea fx:id="explanationInput" layoutX="25.0" layoutY="249.0" prefHeight="331.0" prefWidth="800.0"
+                          promptText="Nhập giải nghĩa của từ...." styleClass="wordbox" stylesheets="@style.css"
+                          wrapText="true">
+                    <effect>
+                        <DropShadow height="15.16" radius="8.54">
+                            <color>
+                                <Color red="0.44736841320991516" green="0.16016894578933716"
+                                       blue="0.44736841320991516"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </TextArea>
+                <Button fx:id="addBtn" layoutX="30.0" layoutY="605.0" mnemonicParsing="false"
+                        onAction="#handleClickAddBtn" prefHeight="36.0" prefWidth="90.0" styleClass="button3"
+                        stylesheets="@style.css" text="THÊM">
+                    <effect>
+                        <DropShadow height="24.89" offsetY="5.0" radius="6.5925" width="3.48">
+                            <color>
+                                <Color red="0.3764705955982208" green="0.03529411926865578" blue="0.3764705955982208"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <font>
+                        <Font name="#9Slide03 Helve Bold" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Pane layoutX="25.0" layoutY="191.0" prefHeight="57.0" prefWidth="800.0" stylesheets="@style.css">
+                    <children>
+                        <Label layoutX="56.0" layoutY="15.0" text="Giải nghĩa" textFill="WHITE">
+                            <font>
+                                <Font name="#9Slide03 Montserrat Medium" size="25.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-term-64.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                    <styleClass>
+                        <String fx:value="gradient1"/>
+                        <String fx:value="headforadd"/>
+                    </styleClass>
+                </Pane>
+                <Pane layoutX="25.0" layoutY="61.0" prefHeight="45.0" prefWidth="386.0" stylesheets="@style.css">
+                    <children>
+                        <Label layoutX="57.0" layoutY="7.0" text="Từ vựng" textFill="WHITE">
+                            <font>
+                                <Font name="#9Slide03 Montserrat Medium" size="25.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-light-on-50.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                    <styleClass>
+                        <String fx:value="gradient1"/>
+                        <String fx:value="headforadd"/>
+                    </styleClass>
+                </Pane>
+                <Pane fx:id="successAlert" layoutX="440.0" layoutY="35.0" prefHeight="119.0" prefWidth="365.0">
+                    <children>
+                        <ImageView fitHeight="87.0" fitWidth="90.0" layoutY="16.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/star.gif"/>
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="87.0" layoutY="19.0" prefHeight="81.0" prefWidth="245.0"
+                               text="Thêm từ thành công!" textFill="#27a35d">
+                            <font>
+                                <Font name="#9Slide03 AmpleSoft Bold Bold" size="26.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <ImageView fitHeight="113.0" fitWidth="800.0" layoutX="24.0" layoutY="-40.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Data/IMG/line.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="330.0" layoutY="-30.0" prefHeight="26.0" prefWidth="191.0" text="make your own words">
+                    <font>
+                        <Font name="System Italic" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="280.0" layoutY="14.0" prefHeight="57.0" prefWidth="324.0" text="THÊM TỪ VỰNG"
+               textFill="#11194e">
+            <font>
+                <Font name="#9Slide03 AmpleSoft Bold Bold" size="42.0"/>
+            </font>
+        </Label>
+    </children>
+
+</AnchorPane>

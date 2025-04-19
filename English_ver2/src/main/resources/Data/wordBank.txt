@@ -1,0 +1,160 @@
+|Bull
+Con trâu
+|Pen
+Bút máy
+|Grill
+Nướng bằng lửa
+|Furnace
+Lò nung
+|Iron
+Sắt
+|Cat
+Con mèo
+|Feline
+Thuộc họ nhà mèo
+|Dog
+Con chó
+|Canine
+Thuộc họ nhà chó
+|Book
+Sách
+|Library
+Thư viện
+|Family
+Gia đình
+|House
+Ngôi nhà
+|Bee
+Con ong
+|Pen
+Cái bút
+|Dictionary
+Từ điển
+|Exploration
+Thám hiểm
+|Maze
+Mê cung
+|Lost
+Lạc đường
+|Generic
+Đại khái
+|Popular
+Phổ biến
+|Population
+Dân số
+|City
+thành phố
+|Bake
+Nướng, nấu
+|Bread
+Bánh mì
+|Cake
+Bánh ngọt, bánh kem
+|Tomato
+Quả cà chua
+|Ice-cream
+Kem lạnh
+|Chicken
+Con gà
+|Cow
+Con bò
+|Generation
+Thế hệ
+|Piano
+Đàn dương cầm
+|Animation
+Hoạt hoạ, hoạt hình
+|Create
+Tạo ra thứ gì đó
+|Creation
+Tạo vật
+|Creature
+Sinh vật
+|Animal
+Động vật
+|Break
+Phá vỡ
+|Mend
+Làm cho liền lại, sửa chữa
+|Fix
+sửa chữa
+|Communal
+Tài sản chung
+|Society
+Xã hội
+|Friendly
+Thân thiện
+|Chaotic
+Hỗn loạn
+|Law
+Luật pháp
+|Keep
+Giữ lại, giữ lấy
+|War
+Chiến tranh
+|Peace
+Hoà bình
+|United
+Đoàn kết (tính từ)
+|Sea
+Biển cả
+|Ocean
+Đại dương
+|Region
+Một khu vực lãnh thổ
+|Countryside
+Miền nông thôn, miền quê
+|Hexagon
+Hình lục giác
+|Rectangle
+Hình tứ giác
+|Legacy
+Di sản
+|Legend
+Truyền thuyết
+|Support
+Hỗ trợ (động từ)
+|Health
+Sức khoẻ
+|Healthy
+Khoẻ mạnh
+|Knight
+Hiệp sĩ
+|Majestic
+Quyền quý
+|History
+Lịch sử
+|Cage
+Cái lồng
+|Intestine
+Nội tạng
+|Magical
+Mang tính ma thuật
+|Fiction
+Giả tưởng
+|Mystical
+Huyền bí
+|Pad-lock
+Ổ khoá
+|Key
+Chìa khoá
+|Military
+Quân đội
+|Standard
+Tiêu chuẩn
+|Riverbank
+Bờ sông
+|Peacock
+Chim công
+|Pheasant
+Con gà lôi
+|Fox
+Con cáo
+|Metal
+Kim loại
+|Alloy
+Hợp kim
+|Direction
+Phương hướng
+|Composite
+Hợp chất

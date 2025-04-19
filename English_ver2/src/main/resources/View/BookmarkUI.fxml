@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<AnchorPane fx:id="BPane" prefHeight="789.0" prefWidth="846.0" style="-fx-background-color: #F6FAFD;"
+            styleClass="border_round" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller.BookmarkController">
+    <children>
+        <AnchorPane layoutY="8.0" prefHeight="785.0" prefWidth="846.0" styleClass="border_round"
+                    stylesheets="@style.css">
+            <children>
+                <AnchorPane layoutX="12.0" layoutY="28.0" prefHeight="687.0" prefWidth="264.0" styleClass="border"
+                            stylesheets="@style.css" AnchorPane.leftAnchor="20.0">
+                    <children>
+                        <Pane prefHeight="65.0" prefWidth="299.0" stylesheets="@style.css">
+                            <children>
+                                <Label layoutX="55.0" layoutY="18.0" text="Các từ đã yêu thích" textFill="WHITE">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat Medium" size="23.0"/>
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="14.0" layoutY="17.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-bookmark-64%20(1).png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                            <styleClass>
+                                <String fx:value="headboard"/>
+                                <String fx:value="gradient1"/>
+                            </styleClass>
+                        </Pane>
+                        <ListView fx:id="listResults" layoutY="83.0" nodeOrientation="LEFT_TO_RIGHT"
+                                  onMouseClicked="#handleMouseClickAWord" prefHeight="603.0" prefWidth="299.0"
+                                  styleClass="list-cell" stylesheets="@style.css">
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="11.27" radius="5.62" width="13.21">
+                                    <color>
+                                        <Color red="0.5525323152542114" green="0.27163201570510864"
+                                               blue="0.6929824352264404"/>
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ListView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="340.0" layoutY="28.0" prefHeight="685.0" prefWidth="497.0" styleClass="border"
+                            stylesheets="@style.css" AnchorPane.rightAnchor="20.0">
+                    <children>
+                        <Pane layoutX="25.0" prefHeight="65.0" prefWidth="467.0" stylesheets="@style.css">
+                            <styleClass>
+                                <String fx:value="headboard"/>
+                                <String fx:value="gradient2"/>
+                            </styleClass>
+                            <children>
+                                <Label layoutX="56.0" layoutY="15.0" text="Định nghĩa" textFill="WHITE">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat Medium" size="25.0"/>
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="14.0" layoutY="15.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-term-64.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="23.0" layoutY="82.0" prefHeight="603.0" prefWidth="467.0" styleClass="wordbox"
+                              stylesheets="@style.css">
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="23.44" radius="11.0975" width="22.95">
+                                    <color>
+                                        <Color red="0.6745098233222961" green="0.5058823823928833"
+                                               blue="0.8509804010391235"/>
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <children>
+                                <Pane fx:id="headerOfExplanation" layoutX="5.0" layoutY="4.0" prefHeight="84.0"
+                                      prefWidth="460.0">
+                                    <children>
+                                        <Label fx:id="wordSearch" layoutX="40.0" layoutY="13.0" prefHeight="37.0"
+                                               prefWidth="237.0" text="Word" textFill="#9f45b0">
+                                            <font>
+                                                <Font name="#9Slide03 Montserrat SemiBold" size="22.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button layoutX="390.0" layoutY="11.0" mnemonicParsing="false"
+                                                onAction="#handleClickDeleteBtn" prefHeight="57.0" prefWidth="60.0"
+                                                styleClass="button_2" stylesheets="@style.css">
+                                            <graphic>
+                                                <ImageView fitHeight="47.0" fitWidth="48.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Data/icons/icons8-delete.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Xóa từ"/>
+                                            </tooltip>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </Button>
+                                        <Button fx:id="volumeBtn" layoutX="320.0" layoutY="11.0" mnemonicParsing="false"
+                                                onAction="#handleClickSoundBtn" prefHeight="57.0" prefWidth="57.0"
+                                                styleClass="button_2" stylesheets="@style.css">
+                                            <graphic>
+                                                <ImageView fitHeight="49.0" fitWidth="48.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Data/icons/icons8-speaker-100.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Phát âm"/>
+                                            </tooltip>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND"/>
+                                            </cursor>
+                                        </Button>
+                                        <Label fx:id="proun" layoutX="40.0" layoutY="48.0" prefHeight="24.0"
+                                               prefWidth="237.0" textFill="#35118f">
+                                            <font>
+                                                <Font name="#9Slide03 Montserrat" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="7.0" layoutY="21.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Data/icons/icons8-light.gif"/>
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                                <TextArea fx:id="explanation" layoutX="7.0" layoutY="87.0" prefHeight="510.0"
+                                          prefWidth="453.0" styleClass="explanation-field" stylesheets="@style.css"
+                                          wrapText="true">
+                                    <font>
+                                        <Font name="#9Slide03 Comfortaa Bold Bold" size="16.0"/>
+                                    </font>
+                                </TextArea>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <Button layoutX="753.0" layoutY="724.0" mnemonicParsing="false" onAction="#handleClickReturnBtn"
+                        prefHeight="32.0" prefWidth="60.0" styleClass="button3" stylesheets="@style.css"
+                        AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="20.0">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-return-48.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <DropShadow height="17.11" offsetY="3.0" radius="4.6475" width="3.48">
+                            <color>
+                                <Color red="0.3764705955982208" green="0.03529411926865578" blue="0.3764705955982208"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

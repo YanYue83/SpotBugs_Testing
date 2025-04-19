@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="bg" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller.PreLoaderController">
+    <children>
+        <Label layoutX="27.0" layoutY="528.0" prefHeight="37.0" prefWidth="191.0" text="Loading . . . "
+               textAlignment="CENTER" textFill="#c45014" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="525.0">
+            <font>
+                <Font name="#9Slide03 Nanami Rounded Light" size="14.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="hoda1st" fitHeight="570.0" fitWidth="435.0" layoutX="351.3333333333333" layoutY="16.0"
+                   AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="14.0"
+                   AnchorPane.topAnchor="14.0">
+            <image>
+                <Image url="@../Data/IMG/@hodarake0.png"/>
+            </image>
+        </ImageView>
+        <Label graphicTextGap="1.0" layoutX="90.0" layoutY="25.0" prefHeight="52.0" prefWidth="257.0"
+               text="English learning app" AnchorPane.bottomAnchor="523.0" AnchorPane.leftAnchor="86.0"
+               AnchorPane.rightAnchor="427.3333333333333" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="#9Slide03 AmpleSoft Bold Bold" size="26.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true"
+                   preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../Data/IMG/logover3.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="-13.0" layoutY="412.0" prefHeight="44.0" prefWidth="302.0"
+               text="© 2023 by group SpeedRunner. All right resvered." textFill="#3b3939f7" AnchorPane.leftAnchor="17.0"
+               AnchorPane.topAnchor="310.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="12.0"/>
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="348.0" prefHeight="44.0" prefWidth="302.0" text="Artwork by HoDaRaKe."
+               textFill="#3b3939f7" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="330.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="12.0"/>
+            </font>
+        </Label>
+        <Label layoutX="16.0" layoutY="133.0" prefHeight="44.0" prefWidth="319.0"
+               text="SPR is an English learning application developed" textFill="#3b3939f7"
+               AnchorPane.leftAnchor="17.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="16.0" layoutY="163.0" prefHeight="44.0" prefWidth="302.0"
+               text="by group students SpeedRunner from UET. " textFill="#3b3939f7" AnchorPane.leftAnchor="17.0"
+               AnchorPane.topAnchor="160.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="13.0"/>
+            </font>
+        </Label>
+        <Line endX="51.00001525878906" endY="3.0517578125E-5" layoutX="117.0" layoutY="309.0" startX="-100.0"
+              AnchorPane.leftAnchor="17.0"/>
+        <Label layoutX="12.0" layoutY="233.0" prefHeight="44.0" prefWidth="302.0" text="Dao Thi Binh An"
+               textFill="#3b3939f7" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="230.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="255.0" prefHeight="44.0" prefWidth="302.0" text="Tran Huu Anh Bang"
+               textFill="#3b3939f7" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="255.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="19.0" layoutY="200.0" prefHeight="44.0" prefWidth="302.0" text="Authors:" textFill="#3b3939f7"
+               AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="200.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="379.0" prefHeight="44.0" prefWidth="302.0"
+               text="For more details and notices, contact directly to us. " textFill="#3b3939f7"
+               AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="360.0">
+            <font>
+                <Font name="#9Slide03 Encode Sans Semi Expanded" size="11.0"/>
+            </font>
+        </Label>
+        <ProgressBar cache="true" layoutX="23.0" layoutY="556.0" opacity="0.59" prefHeight="18.0" prefWidth="280.0"
+                     stylesheets="@style.css"/>
+    </children>
+</AnchorPane>

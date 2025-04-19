@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="560.0" prefWidth="846.0" style="-fx-background-color: #3B2865;" styleClass="border"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="View.Controller.ScrambleController">
+    <children>
+        <Label fx:id="result" layoutX="112.0" layoutY="406.0" prefHeight="125.0" prefWidth="638.0" text="Label"
+               textFill="WHITE">
+            <font>
+                <Font name="#9Slide03 Comfortaa" size="30.0"/>
+            </font>
+        </Label>
+        <HBox fx:id="guessBox" layoutX="47.0" layoutY="356.0" prefHeight="79.0" prefWidth="761.0">
+        </HBox>
+        <HBox fx:id="liveLeft" layoutX="241.0" layoutY="20.0" prefHeight="44.0" prefWidth="318.0"/>
+        <Group layoutX="564.97998046875" layoutY="12.0">
+            <children>
+                <Label fx:id="currentScore" layoutX="151.02001953125" prefHeight="51.0" prefWidth="125.0" text="100.0"
+                       textFill="#d77914" wrapText="true">
+                    <font>
+                        <Font name="#9Slide03 Arima Madurai Bold Bold" size="32.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="labelScore" layoutX="0.02001953125" layoutY="18.0" prefHeight="25.0" prefWidth="147.0"
+                       text="Điểm hiện tại:" textFill="WHITE">
+                    <font>
+                        <Font name="#9Slide03 Comfortaa Bold Bold" size="20.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Group>
+        <Pane fx:id="cluePane" layoutX="109.0" layoutY="101.0" prefHeight="92.0" prefWidth="638.0"
+              stylesheets="@style.css">
+            <children>
+                <Label fx:id="clue" alignment="CENTER" layoutX="46.0" layoutY="17.0" prefHeight="59.0" prefWidth="554.0"
+                       text="Gợi ý">
+                    <font>
+                        <Font name="#9Slide03 Comfortaa Bold Bold" size="26.0"/>
+                    </font>
+                </Label>
+            </children>
+            <styleClass>
+                <String fx:value="border"/>
+                <String fx:value="gradient2"/>
+            </styleClass>
+        </Pane>
+        <Button fx:id="exitBtn" layoutX="32.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="41.0"
+                styleClass="button3" stylesheets="@style.css">
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/icons/icons8-close-60.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <tooltip>
+                <Tooltip text="Thoát"/>
+            </tooltip>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <ProgressBar fx:id="showTimer" layoutX="227.0" layoutY="523.0" prefHeight="26.0" prefWidth="413.0"
+                     progress="1.0" styleClass="scb" stylesheets="@style.css"/>
+        <Pane fx:id="answerPane" layoutX="110.0" layoutY="213.0" prefHeight="105.0" prefWidth="638.0"
+              styleClass="answerPane" stylesheets="@style.css">
+            <children>
+                <HBox fx:id="answerBox" layoutX="10.0" layoutY="15.0" prefHeight="79.0" prefWidth="616.0"/>
+            </children>
+        </Pane>
+        <Pane fx:id="resultPane" layoutX="240.0" layoutY="14.0" prefHeight="539.0" prefWidth="364.0"
+              stylesheets="@style.css">
+            <children>
+                <ImageView fitHeight="547.0" fitWidth="356.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/IMG/end.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="154.0" layoutY="322.0" text="ĐIỂM">
+                    <font>
+                        <Font name="#9Slide03 Kaleko 105 Round Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="104.0" layoutY="217.0" text="SỐ CÂU ĐÚNG">
+                    <font>
+                        <Font name="#9Slide03 Kaleko 105 Round Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="countLB" alignment="CENTER" layoutX="129.0" layoutY="257.0" prefHeight="27.0"
+                       prefWidth="105.0" text="0" textFill="#db851c">
+                    <font>
+                        <Font name="#9Slide03 Kaleko 105 Round Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="scoreLB" layoutX="133.0" layoutY="360.0" prefHeight="27.0" prefWidth="105.0" text="ĐIỂM"
+                       textAlignment="CENTER" textFill="#db851c">
+                    <font>
+                        <Font name="#9Slide03 Kaleko 105 Round Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="btnGameRestart" layoutX="130.0" layoutY="427.0" mnemonicParsing="false" prefHeight="44.0"
+                        prefWidth="105.0" style="-fx-background-color: #8AC646;" styleClass="button3"
+                        stylesheets="@style.css" text="RESTART">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow spread="0.31">
+                            <color>
+                                <Color red="0.07017543911933899" green="0.01277886051684618"
+                                       blue="0.01277886051684618"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>

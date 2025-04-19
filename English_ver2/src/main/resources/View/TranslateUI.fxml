@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="789.0" prefWidth="846.0" style="-fx-background-color: #F6FAFD;" styleClass="border_round"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="View.Controller.TranslateController">
+    <Pane layoutX="12.0" layoutY="143.0">
+        <children>
+            <AnchorPane layoutY="7.0" prefHeight="641.0" prefWidth="794.0" styleClass="border2"
+                        stylesheets="@style.css">
+                <children>
+                    <Pane layoutX="11.0" layoutY="17.0" prefHeight="612.0" prefWidth="811.0">
+                        <children>
+                            <TextArea fx:id="sourceTextArea" layoutX="14.0" layoutY="64.0" prefHeight="536.0"
+                                      prefWidth="337.0" promptText="Nhập văn bản..." styleClass="wordbox"
+                                      stylesheets="@style.css" wrapText="true">
+                                <effect>
+                                    <DropShadow>
+                                        <color>
+                                            <Color red="0.6352941393852234" green="0.545098066329956"
+                                                   blue="0.7254902124404907"/>
+                                        </color>
+                                    </DropShadow>
+                                </effect>
+                                <font>
+                                    <Font name="#9Slide03 Helve Regular" size="18.0"/>
+                                </font>
+                            </TextArea>
+                            <Button fx:id="translateBtn" layoutX="345.0" layoutY="273.0" mnemonicParsing="false"
+                                    nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="48.0"
+                                    styleClass="trans-button" stylesheets="@style.css"/>
+                            <ComboBox fx:id="sourceLanguageComboBox" layoutX="14.0" layoutY="5.0" prefHeight="36.0"
+                                      prefWidth="337.0" stylesheets="@style.css" visibleRowCount="8">
+                                <styleClass>
+                                    <String fx:value="decrement-button"/>
+                                    <String fx:value="transbox"/>
+                                </styleClass>
+                            </ComboBox>
+                            <ComboBox fx:id="targetLanguageComboBox" layoutX="445.0" layoutY="5.0" prefHeight="38.0"
+                                      prefWidth="347.0" stylesheets="@style.css" visibleRowCount="8">
+                                <styleClass>
+                                    <String fx:value="increment-button"/>
+                                    <String fx:value="transbox"/>
+                                </styleClass>
+                            </ComboBox>
+                            <Button fx:id="switchToggle" layoutX="368.0" layoutY="5.0" mnemonicParsing="false"
+                                    onAction="#handleOnClickSwitchToggle" prefHeight="38.0" prefWidth="60.0"
+                                    styleClass="button3" stylesheets="@style.css">
+                                <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true"
+                                               preserveRatio="true">
+                                        <image>
+                                            <Image url="@../Data/icons/icons8-transfer-64.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <effect>
+                                    <DropShadow height="17.11" offsetY="3.0" radius="4.6475" width="3.48">
+                                        <color>
+                                            <Color red="0.3764705955982208" green="0.03529411926865578"
+                                                   blue="0.3764705955982208"/>
+                                        </color>
+                                    </DropShadow>
+                                </effect>
+                                <cursor>
+                                    <Cursor fx:constant="HAND"/>
+                                </cursor>
+                            </Button>
+                            <Button layoutX="356.0" layoutY="267.0" onAction="#translateText" prefHeight="38.0"
+                                    prefWidth="83.0" styleClass="button3" stylesheets="@style.css" text="TRANSLATE">
+                                <font>
+                                    <Font name="#9Slide03 AmpleSoft Bold Bold" size="12.0"/>
+                                </font>
+                                <effect>
+                                    <DropShadow height="15.16" offsetY="3.0" radius="6.1075" spread="0.21"
+                                                width="11.27">
+                                        <color>
+                                            <Color red="0.3764705955982208" green="0.03529411926865578"
+                                                   blue="0.3764705955982208"/>
+                                        </color>
+                                    </DropShadow>
+                                </effect>
+                                <cursor>
+                                    <Cursor fx:constant="HAND"/>
+                                </cursor>
+                            </Button>
+                            <TextArea fx:id="resultArea" layoutX="444.0" layoutY="64.0" prefHeight="536.0"
+                                      prefWidth="347.0" promptText="Bản dịch..." styleClass="wordbox"
+                                      stylesheets="@style.css" wrapText="true">
+                                <effect>
+                                    <DropShadow>
+                                        <color>
+                                            <Color red="0.6352941393852234" green="0.545098066329956"
+                                                   blue="0.7254902124404907"/>
+                                        </color>
+                                    </DropShadow>
+                                </effect>
+                                <font>
+                                    <Font name="#9Slide03 Helve Regular" size="18.0"/>
+                                </font>
+                            </TextArea>
+                        </children>
+                    </Pane>
+                </children>
+            </AnchorPane>
+        </children>
+    </Pane>
+    <ImageView fitHeight="140.0" fitWidth="771.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true">
+        <image>
+            <Image url="@../Data/IMG/rounded-in-photoretrica%20(3).png"/>
+        </image>
+    </ImageView>
+</AnchorPane>

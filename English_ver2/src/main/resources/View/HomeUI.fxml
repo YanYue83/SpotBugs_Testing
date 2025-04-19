@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0"
+            prefWidth="1200.0" style="-fx-border-radius: 20; -fx-background-color: transperent;"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="View.Controller.HomeController">
+    <children>
+        <Pane layoutX="14.0" prefHeight="789.0" prefWidth="221.0" style="-fx-background-color: #2D539A;"
+              styleClass="border" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <Line endX="108.66665649414062" endY="106.66666412353516" startX="18.0" startY="106.66666412353516"
+                      stroke="WHITE"/>
+                <ImageView fitHeight="67.0" fitWidth="85.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/IMG/logo3.png"/>
+                    </image>
+                </ImageView>
+                <Pane layoutX="18.0" layoutY="170.0" prefHeight="430.0" prefWidth="92.0" styleClass="border"
+                      stylesheets="@style.css">
+                    <children>
+                        <Rectangle fx:id="shadow" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="70.0"
+                                   layoutX="10.0" layoutY="10.0" opacity="0.3" stroke="WHITE" strokeType="INSIDE"
+                                   strokeWidth="5.0" style="-fx-arc-width: 40; -fx-arc-height: 40;" width="70.0"/>
+                        <Button fx:id="btnHome" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0"
+                                prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                            <graphic>
+                                <ImageView fitHeight="42.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true"
+                                           translateX="2.0">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-home-96.png"/>
+                                    </image>
+                                    <rotationAxis>
+                                        <Point3D/>
+                                    </rotationAxis>
+                                    <viewport>
+                                        <Rectangle2D/>
+                                    </viewport>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Home">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat" size="12.0"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnDic" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" prefHeight="70.0"
+                                prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                            <graphic>
+                                <ImageView fitHeight="46.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true"
+                                           translateX="2.0">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-book-96.png"/>
+                                    </image>
+                                    <rotationAxis>
+                                        <Point3D/>
+                                    </rotationAxis>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Dictionary">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat" size="12.0"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnTrans" layoutX="10.0" layoutY="250.0" mnemonicParsing="false"
+                                prefHeight="70.0" prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                            <graphic>
+                                <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                                           translateX="2.0">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-translate-96.png"/>
+                                    </image>
+                                    <rotationAxis>
+                                        <Point3D/>
+                                    </rotationAxis>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Translate">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat" size="12.0"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnGame" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" prefHeight="70.0"
+                                prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true"
+                                           translateX="2.0">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-game-96.png"/>
+                                    </image>
+                                    <rotationAxis>
+                                        <Point3D/>
+                                    </rotationAxis>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Game">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat" size="12.0"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnMore" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" prefHeight="70.0"
+                                prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                            <graphic>
+                                <ImageView fitHeight="43.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true"
+                                           translateX="2.0">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-add-96.png"/>
+                                    </image>
+                                    <rotationAxis>
+                                        <Point3D/>
+                                    </rotationAxis>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Add vocabulary">
+                                    <font>
+                                        <Font name="#9Slide03 Montserrat" size="12.0"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                    </children>
+                </Pane>
+                <Button fx:id="btnClose" layoutX="28.0" layoutY="679.0" mnemonicParsing="false" prefHeight="70.0"
+                        prefWidth="70.0" styleClass="button_2" stylesheets="@style.css">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-logout-rounded-100.png"/>
+                            </image>
+                            <rotationAxis>
+                                <Point3D/>
+                            </rotationAxis>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Exit">
+                            <font>
+                                <Font name="#9Slide03 Montserrat" size="12.0"/>
+                            </font>
+                        </Tooltip>
+                    </tooltip>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Line endX="108.66665649414062" endY="106.66666412353516" layoutY="548.0" startX="18.0"
+                      startY="106.66666412353516" stroke="WHITE"/>
+            </children>
+        </Pane>
+        <Pane layoutX="948.0" layoutY="5.0" prefHeight="789.0" prefWidth="252.0" stylesheets="@style.css">
+            <children>
+                <ImageView fitHeight="193.0" fitWidth="182.0" layoutX="56.0" layoutY="568.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/IMG/giphy%20(1).gif"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="123.0" fitWidth="111.0" layoutX="115.0" layoutY="420.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/IMG/giphy%20(3).gif"/>
+                    </image>
+                </ImageView>
+                <Pane layoutX="56.0" layoutY="166.0" prefHeight="39.0" prefWidth="174.0" stylesheets="@style.css">
+                    <children>
+                        <Label alignment="TOP_LEFT" layoutX="36.0" layoutY="6.0" prefHeight="28.0" prefWidth="105.0"
+                               text="I'm your guide">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                    <styleClass>
+                        <String fx:value="tag2"/>
+                        <String fx:value="hover"/>
+                    </styleClass>
+                </Pane>
+                <ImageView fitHeight="130.0" fitWidth="151.0" layoutX="73.0" layoutY="20.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../Data/IMG/11zon_cropped.png"/>
+                    </image>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN">
+                            <color>
+                                <Color red="0.3197602927684784" green="0.2887156307697296" blue="0.7543859481811523"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ImageView>
+                <Button layoutX="56.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleClickHelp"
+                        prefHeight="39.0" prefWidth="174.0" stylesheets="@style.css" text="My useful tips here">
+                    <styleClass>
+                        <String fx:value="tag2"/>
+                        <String fx:value="hover"/>
+                        <String fx:value="button_2"/>
+                    </styleClass>
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="125.0" layoutY="275.0" pickOnBounds="true"
+                           preserveRatio="true" rotate="180.0">
+                    <image>
+                        <Image url="@../Data/icons/icons8-double-down.gif"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <VBox layoutX="977.3333129882812" layoutY="544.0" prefHeight="100.0" prefWidth="25.0"
+              style="-fx-background-color: #B0A0C9;" styleClass="tag" stylesheets="@style.css"
+              AnchorPane.leftAnchor="980.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="5.0" radius="5.34" width="23.36">
+                    <color>
+                        <Color red="0.7568627595901489" green="0.7882353067398071" blue="0.8745098114013672"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </VBox>
+        <VBox layoutX="977.3333129882812" layoutY="444.0" prefHeight="100.0" prefWidth="25.0"
+              style="-fx-background-color: #8989D6;" styleClass="tag" stylesheets="@style.css"
+              AnchorPane.leftAnchor="980.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="5.0" radius="5.34" width="23.36">
+                    <color>
+                        <Color red="0.7568627595901489" green="0.7882353067398071" blue="0.8745098114013672"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </VBox>
+        <VBox layoutX="977.3333129882812" layoutY="640.0" prefHeight="100.0" prefWidth="25.0"
+              style="-fx-background-color: #D6A9C4;" styleClass="tag" stylesheets="@style.css"
+              AnchorPane.leftAnchor="980.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="5.0" radius="5.34" width="23.36">
+                    <color>
+                        <Color red="0.7568627595901489" green="0.7882353067398071" blue="0.8745098114013672"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </VBox>
+        <AnchorPane fx:id="homePane" layoutX="132.0" prefHeight="789.0" prefWidth="846.0"
+                    style="-fx-background-color: #F6FAFD;" styleClass="border_round" stylesheets="@style.css"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane fx:id="datetime" layoutX="457.0" layoutY="28.0" prefHeight="65.0" prefWidth="352.0"
+                      style="-fx-background-color: white;" styleClass="border">
+                    <children>
+                        <Label fx:id="dateTimeLabel" layoutX="63.0" layoutY="8.0" prefHeight="49.0" prefWidth="266.0"
+                               text="Sunday, 19/11/2023" textFill="#243153" textOverrun="CLIP">
+                            <font>
+                                <Font name="#9Slide03 SFU Helvetica Regular" size="24.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-plant.gif"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Pane fx:id="welcome_back" layoutX="36.0" layoutY="136.0" prefHeight="193.0" prefWidth="376.0"
+                      stylesheets="@style.css" AnchorPane.leftAnchor="40.0">
+                    <styleClass>
+                        <String fx:value="border"/>
+                        <String fx:value="hover"/>
+                        <String fx:value="gradient1"/>
+                    </styleClass>
+                    <children>
+                        <Label layoutX="33.0" layoutY="5.0" prefHeight="92.0" prefWidth="252.0" text="Welcome !"
+                               textFill="WHITE">
+                            <font>
+                                <Font name="#9Slide03 Kaleko 105 Round Bold" size="30.0"/>
+                            </font>
+                        </Label>
+                        <Text fill="#fffaf5" layoutX="33.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="We hope you are well, have a nice experience with us."
+                              wrappingWidth="221.33333333333331">
+                            <font>
+                                <Font name="#9Slide03 Montserrat" size="16.0"/>
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="102.0" fitWidth="93.0" layoutX="269.0" layoutY="45.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/IMG/icons8-flower-100.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Label ellipsisString="" layoutX="48.0" layoutY="35.0" prefHeight="60.0" prefWidth="151.0" text="Hello,"
+                       textFill="#243153" textOverrun="CLIP" AnchorPane.leftAnchor="48.0">
+                    <font>
+                        <Font name="#9Slide03 AmpleSoft Bold Bold" size="56.0"/>
+                    </font>
+                </Label>
+                <Label ellipsisString="" layoutX="197.0" layoutY="35.0" prefHeight="63.0" prefWidth="221.0"
+                       text="learner!" textFill="#243153" textOverrun="CLIP">
+                    <font>
+                        <Font name="#9Slide03 AmpleSoft Bold Bold" size="56.0"/>
+                    </font>
+                </Label>
+                <Pane fx:id="word_od" layoutX="47.0" layoutY="365.0" prefHeight="386.0" prefWidth="376.0"
+                      stylesheets="@style.css" AnchorPane.bottomAnchor="38.33333333333326" AnchorPane.leftAnchor="40.0"
+                      AnchorPane.rightAnchor="420.0">
+                    <styleClass>
+                        <String fx:value="border"/>
+                        <String fx:value="hover"/>
+                        <String fx:value="gradient2"/>
+                    </styleClass>
+                    <children>
+                        <Label layoutX="89.0" layoutY="20.0" prefHeight="46.0" prefWidth="210.0" text="WORD OF THE DAY"
+                               textFill="#ffffffb5">
+                            <font>
+                                <Font name="#9Slide03 Kaleko 105 Round Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Text layoutX="59.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="navel-gazing"
+                              wrappingWidth="283.3332824707031">
+                            <font>
+                                <Font name="#9Slide03 Cabin Bold Bold" size="48.0"/>
+                            </font>
+                        </Text>
+                        <Text layoutX="103.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="/neɪ.vəlˌɡeɪ.zɪŋ/" wrappingWidth="182.0">
+                            <font>
+                                <Font name="#9Slide03 Montserrat" size="23.0"/>
+                            </font>
+                        </Text>
+                        <Text layoutX="51.0" layoutY="245.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Hành động tập trung quá mức vào các vấn đề hoặc mối quan tâm cá nhân của một người"
+                              textAlignment="CENTER" wrappingWidth="283.3332824707031">
+                            <font>
+                                <Font name="#9Slide03 Montserrat" size="16.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Pane fx:id="weather" layoutX="466.0" layoutY="364.0" prefHeight="386.0" prefWidth="344.0"
+                      stylesheets="@style.css">
+                    <styleClass>
+                        <String fx:value="border"/>
+                        <String fx:value="gradient1"/>
+                    </styleClass>
+                    <children>
+                        <TextField fx:id="searchTextField" layoutX="40.0" layoutY="25.0" prefHeight="46.0"
+                                   prefWidth="210.0" promptText="City name" style="-fx-border-color: black;"
+                                   styleClass="search-field" stylesheets="@style.css">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </TextField>
+                        <Button fx:id="searchButton" layoutX="251.0" layoutY="25.0" mnemonicParsing="false"
+                                prefHeight="41.0" prefWidth="60.0" style="-fx-background-color: #D6A9C4;"
+                                stylesheets="@style.css" text="Search">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <effect>
+                                <DropShadow height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="1.53">
+                                    <color>
+                                        <Color red="0.3858484923839569" green="0.21523717045783997"
+                                               blue="0.4649122953414917"/>
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                        <Label fx:id="temperatureLabel" layoutX="37.0" layoutY="152.0" prefHeight="41.0"
+                               prefWidth="130.0" text="20 C" textFill="#f6f6f6">
+                            <font>
+                                <Font name="#9Slide03 Cabin Bold Bold" size="33.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="cityLabel" layoutX="37.0" layoutY="96.0" prefHeight="60.0" prefWidth="296.0"
+                               text="Ha Noi" textFill="#f6f6f6">
+                            <font>
+                                <Font name="#9Slide03 Cabin Bold Bold" size="40.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="weatherTypeLabel" layoutX="42.0" layoutY="196.0" prefHeight="46.0"
+                               prefWidth="239.0" text="Kiểu thời tiết" textFill="WHITE">
+                            <font>
+                                <Font name="#9Slide03 Cabin" size="19.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="humidityLabel" layoutX="42.0" layoutY="242.0" prefHeight="46.0" prefWidth="239.0"
+                               text="Humidity">
+                            <font>
+                                <Font name="#9Slide03 Cabin" size="19.0"/>
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-humidity-50.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label fx:id="windLabel" layoutX="39.0" layoutY="288.0" prefHeight="46.0" prefWidth="239.0"
+                               text="Gió:">
+                            <font>
+                                <Font name="#9Slide03 Cabin" size="19.0"/>
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Data/icons/icons8-wind-60.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <ImageView fx:id="iconWeather" fitHeight="84.0" fitWidth="92.0" layoutX="227.0" layoutY="125.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Data/icons/icons8-partly-cloudy-day-96.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <ImageView fitHeight="193.0" fitWidth="334.0" layoutX="473.0" layoutY="136.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Data/IMG/rounded-in-photoretrica%20(4).png"/>
+                    </image>
+                    <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" radius="8.055" width="13.22">
+                            <color>
+                                <Color red="0.3674463927745819" green="0.10363872349262238" blue="0.7631579041481018"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
